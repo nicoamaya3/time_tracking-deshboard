@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import {User} from './components/User'
+import {Cartas} from './components/Cartas'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
     <User></User>
+    <Cartas></Cartas>
     </>
   )
 }
