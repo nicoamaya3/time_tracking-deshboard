@@ -1,0 +1,162 @@
+  *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --purple:   #5B52E8;
+      --purple-light: #6D65F2;
+      --dark-bg:  #1A1B2E;
+      --dark-card: #1E1F35;
+      --text-white: #FFFFFF;
+      --text-muted: #7B7C9E;
+      --text-active: #FFFFFF;
+      --accent: #A09FF5;
+      --radius-card: 28px;
+      --radius-inner: 20px;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0F1022;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* ── Outer card ── */
+    .card {
+      width: 220px;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow:
+        0 30px 60px rgba(0,0,0,.55),
+        0 0 0 1px rgba(255,255,255,.06);
+      animation: rise .7s cubic-bezier(.22,.97,.48,1) both;
+    }
+
+    /* ── Top purple section ── */
+    .card__header {
+      background: var(--purple);
+      padding: 32px 24px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle radial glow inside header */
+    .card__header::before {
+      content: '';
+      position: absolute;
+      inset: -60px;
+      background: radial-gradient(circle at 60% 20%, rgba(255,255,255,.13) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* Floating circle decoration */
+    .card__header::after {
+      content: '';
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.12);
+      right: -40px;
+      top: -40px;
+    }
+
+    /* ── Avatar ── */
+    .avatar-wrap {
+      position: relative;
+      width: 68px;
+      height: 68px;
+      margin-bottom: 24px;
+    }
+
+    .avatar-wrap img {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 3px solid rgba(255,255,255,.35);
+    }
+
+    /* Online indicator */
+    .avatar-dot {
+      position: absolute;
+      bottom: 3px;
+      right: 3px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #4ADE80;
+      border: 2px solid var(--purple);
+    }
+
+    /* ── Label + Name ── */
+    .card__label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(255,255,255,.6);
+      letter-spacing: .04em;
+      margin-bottom: 4px;
+    }
+
+    .card__name {
+      font-family: 'Syne', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--text-white);
+      line-height: 1.1;
+      letter-spacing: -.01em;
+    }
+
+    /* ── Bottom dark section ── */
+    .card__body {
+      background: var(--dark-bg);
+      padding: 20px 24px 28px;
+    }
+
+    /* ── Period nav ── */
+    .period-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .period-nav__item {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px;
+      font-weight: 400;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 5px 0;
+      position: relative;
+      transition: color .25s;
+      user-select: none;
+    }
+
+    .period-nav__item:hover {
+      color: var(--accent);
+    }
+
+    .period-nav__item.active {
+      font-weight: 500;
+      color: var(--text-active);
+    }
+
+    /* Active bar on the left */
+    .period-nav__item.active::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 20px;
+      border-radius: 0 3px 3px 0;
+      background: var(--purple-light);
+    }
