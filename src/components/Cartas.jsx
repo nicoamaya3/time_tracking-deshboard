@@ -6,7 +6,8 @@ import "../stylesheets/Cartas.css"
 export const Cartas = () => {
     return (
         <>
-            <div class="cards">
+        <div className="si">
+               <div class="cards">
                 <div class="card-headers">
                     <span class="card-title">Work</span>
                     <button class="card-menu" aria-label="More options">
@@ -19,6 +20,8 @@ export const Cartas = () => {
                     <span class="value">–34hrs</span>
                 </div>
             </div>
+        </div>
+         
         </>
     )
 }

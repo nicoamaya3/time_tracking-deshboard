@@ -9,7 +9,13 @@ function App() {
   return (
     <>
     <User></User>
-    <Cartas></Cartas>
+    <Cartas/>
+    <Cartas/>
+    <Cartas/>
+    <Cartas/>
+    <Cartas/>
+    <Cartas/>
+
     </>
   )
 }
