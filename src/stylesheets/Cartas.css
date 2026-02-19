@@ -1,8 +1,26 @@
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+
+.cartacolor{
+  background-color: yellowgreen;
+  border-radius: 20px;
+  padding-top: 45px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work{background-color: #ff8c66;}
+.play{background-color: #56c2e6;}
+.study{background-color: #ff5c7c;}
+.exercise{background-color: #4acf81;}
+.social{background-color: #7536d3;}
+.selfcare{background-color: #f1c65b;}
+
 
 body {
   min-height: 100vh;
@@ -26,13 +44,6 @@ body {
   overflow: hidden;
   animation: fadeUp 0.5s ease both;
   height: 30vh;
-}
-
-.si{
-    background-color: aqua;
-    display: flex;
-    width: 150px;
-    flex-wrap: wrap;
 }
 
 
