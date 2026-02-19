@@ -28,6 +28,9 @@
 
     /* ── Outer card ── */
     .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 220px;
       border-radius: var(--radius-card);
       overflow: hidden;
@@ -35,6 +38,15 @@
         0 30px 60px rgba(0,0,0,.55),
         0 0 0 1px rgba(255,255,255,.06);
       animation: rise .7s cubic-bezier(.22,.97,.48,1) both;
+    }
+
+    .ji{
+      border-radius: var(--radius-card);
+      background: var(--purple);
+      width: 216px;
+      height: 40vh;
+      position: relative;
+      overflow: hidden;
     }
 
     /* ── Top purple section ── */
